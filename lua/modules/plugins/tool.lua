@@ -76,6 +76,7 @@ tool["gelguy/wilder.nvim"] = {
 --                        Telescope Plugins                         --
 ----------------------------------------------------------------------
 tool["nvim-telescope/telescope.nvim"] = {
+	ft = { "mason" },
 	lazy = true,
 	cmd = "Telescope",
 	config = require("tool.telescope"),
@@ -84,9 +85,13 @@ tool["nvim-telescope/telescope.nvim"] = {
 		{ "nvim-tree/nvim-web-devicons" },
 		{ "jvgrootveld/telescope-zoxide" },
 		{ "debugloop/telescope-undo.nvim" },
+		{ "nvim-telescope/telescope-ui-select.nvim" },
 		{ "nvim-telescope/telescope-frecency.nvim" },
 		{ "nvim-telescope/telescope-live-grep-args.nvim" },
-		{ "nvim-telescope/telescope-fzf-native.nvim", build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release" },
+		{
+			"nvim-telescope/telescope-fzf-native.nvim",
+			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
+		},
 		{
 			"FabianWirth/search.nvim",
 			config = require("tool.search"),
