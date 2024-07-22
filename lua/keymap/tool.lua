@@ -3,6 +3,7 @@ local map_cr = bind.map_cr
 local map_cu = bind.map_cu
 local map_cmd = bind.map_cmd
 local map_callback = bind.map_callback
+
 require("keymap.helpers")
 
 local plug_map = {
@@ -186,6 +187,14 @@ local plug_map = {
 		:with_noremap()
 		:with_silent()
 		:with_desc("debug: Open REPL"),
+
+	-- Plugin: Flutter tools
+	["n|<F2>"] = map_callback(function()
+			require("telescope").extensions.flutter.commands()
+		end)
+		:with_noremap()
+		:with_silent()
+		:with_desc("flutter: Open Flutter commands"),
 }
 
 bind.nvim_load_mapping(plug_map)

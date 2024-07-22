@@ -113,6 +113,7 @@ settings["lsp_deps"] = {
 	"html",
 	"jsonls",
 	"lua_ls",
+	"pyright",
 	"pylsp",
 	"gopls",
 }

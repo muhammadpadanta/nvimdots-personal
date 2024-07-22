@@ -7,7 +7,7 @@ return {
 			plugins = {
 				-- Lint
 				ruff = {
-					enabled = true,
+					enabled = false,
 					select = {
 						-- enable pycodestyle
 						"E",
@@ -27,7 +27,7 @@ return {
 						E501 = "I",
 					},
 				},
-				flake8 = { enabled = false },
+				flake8 = { enabled = true },
 				pyflakes = { enabled = false },
 				pycodestyle = { enabled = false },
 				mccabe = { enabled = false },

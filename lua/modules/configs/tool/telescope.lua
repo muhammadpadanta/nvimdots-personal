@@ -52,7 +52,7 @@ return function()
 				},
 			},
 			fzf = {
-				fuzzy = false,
+				fuzzy = true,
 				override_generic_sorter = true,
 				override_file_sorter = true,
 				case_mode = "smart_case",
@@ -104,8 +104,6 @@ return function()
 	require("telescope").load_extension("persisted")
 	require("telescope").load_extension("aerial")
 	require("telescope").load_extension("advanced_git_search")
-	--[[ 	require("telescope").load_extension("ui-select") ]]
-	if vim.bo.filetype == "mason" then
-		require("telescope").load_extension("ui-select")
-	end
+	require("telescope").load_extension("flutter")
+	require("telescope").load_extension("ui-select")
 end
