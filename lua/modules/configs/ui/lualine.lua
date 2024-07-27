@@ -255,7 +255,7 @@ return function()
 			theme = custom_theme(),
 			disabled_filetypes = { statusline = { "alpha" } },
 			component_separators = "",
-			section_separators = { left = "", right = "" },
+			section_separators = { left = "", right = "" },
 		},
 		sections = {
 			lualine_a = { "mode" },
@@ -306,7 +306,7 @@ return function()
 						hint = icons.diagnostics.Hint_alt,
 					},
 				},
-				components.lsp,
+				--components.lsp,
 			},
 			lualine_x = {
 				{
@@ -329,7 +329,8 @@ return function()
 			lualine_y = {
 				components.separator,
 				components.python_venv,
-				components.cwd,
+				-- components.cwd,
+				components.lsp,
 			},
 			lualine_z = { components.file_location },
 		},
